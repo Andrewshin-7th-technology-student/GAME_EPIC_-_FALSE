@@ -386,7 +386,7 @@ function closeGameplayDialog() {
     //changed the values accordingly
     MAX_BOMBS = 7 * val; // maximum number of bombs that can be on screen
     MAX_BOMB_LIFE = 5 * val; // maximum life of a bomb
-    MAX_LIVES = (3 - val) + 1; // maximum number of lives
+    MAX_LIVES = (12 - val) + 1; // maximum number of lives
     prob = 0.3 * val; //probublity of creating a bomb
     lives = MAX_LIVES; //max number of lives
     timegap_edible = (1000 / val); //time between two edible
