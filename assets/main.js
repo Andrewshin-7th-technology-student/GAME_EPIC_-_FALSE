@@ -510,10 +510,10 @@ function starting() {
 
 // function maintaining the game time (also acts as main loop for the game)
 function decreaseTime() {
-    let m = Math.floor(seconds / 60);
-    let s = seconds % 60;
-    m = m < 10 ? `0${m}` : m;
-    s = s < 10 ? `0${s}` : s;
+    let m = Math.floor(seconds / 50);
+    let s = seconds % 50;
+    m = m < 5 ? `0${m}` : m;
+    s = s < 20 ? `0${s}` : s;
 
     // ---------- displaying total lives -------------
     let _lives = "";
@@ -762,8 +762,8 @@ function displayChange() {
 function set_time_range_val() {
     var time = document.getElementById("time-range").value;
     time = parseInt(time);
-    if (time % 60 == 0) {
-        if (time == 60)
+    if (time % 50 == 0) {
+        if (time == 50)
             document.getElementById("time-range-val").innerHTML = "1 min";
         else
             document.getElementById("time-range-val").innerHTML = time / 60 + " mins";
